@@ -33,6 +33,24 @@ binom.pmf([5, 6, 7, 8, 9, 10], n , p).sum()
 
 1 - binom.cdf(4, n , p)
 
-probabilidade  = binom.sf(4, n, p)
+# probabilidade  = binom.sf(4, n, p)
 
-print('%0.8f' % probabilidade)
+# print('%0.8f' % probabilidade)
+
+# Exemplo Gincana
+
+p = 0.6
+n = 12
+k = 8
+
+probabilidade = binom.pmf(k, n, p)
+equipes = 30 * probabilidade
+# print(equipes)
+
+# p = 0.22
+# n = 3
+# k = 2
+
+# probabilidade = binom.pmf(k, n, p)
+# familias = 50 * probabilidade
+# print(familias)
