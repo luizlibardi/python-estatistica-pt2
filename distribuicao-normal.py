@@ -26,7 +26,7 @@ z = (1.9 - media) / desvio_padrao
 probabilidade = 1 - 0.9767
 probabilidade = 1 - norm.cdf(-z) # com scipy
 
-print(probabilidade)
+# print(probabilidade)
 
 probabilidade = 0.8413
 # print(f'Probabilidade de {probabilidade}')
@@ -43,9 +43,13 @@ probabilidade = (0.8413 - 0.5) * 2
 # probabilidade = norm.cdf(z_superior) - norm.cdf(z_inferior)
 # print(probabilidade)
 
-media = 300
-desvio_padrao = 50
-z = (350 - media) / desvio_padrao
-probabilidade = norm.cdf(z) - (1 - norm.cdf(z))
+media = 720
+desvio_padrao = 30
+z_init = (650 - media) / desvio_padrao
+z_final = (750 - media) / desvio_padrao
+
+probabilidade = norm.cdf(z_final) - norm.cdf(z_init)
 # print(probabilidade)
+
+print(tabela_normal_padronizada)
 
